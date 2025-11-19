@@ -1,0 +1,10 @@
+load('ket_qua_luoi_11RBF.mat','tv','uv');
+figure(1);
+plot(tv*10^6,uv{1}(:,1)','--b','LineWidth',3); xlabel('t(\mus)'); ylabel('Voltage(V)');
+grid on;
+hold on;
+load('ket_qua_luoi_22RBF.mat','tv','uv');
+plot(tv*10^6,uv{1}(:,1)','-.r','LineWidth',3); xlabel('t(us)'); ylabel('U(V)');
+load('ket_qua_luoi_66RBF.mat','tv','uv');
+plot(tv*10^6,uv{1}(:,1)','g','LineWidth',3); xlabel('t(us)'); ylabel('U(V)');
+legend('grid 1x1','grid 2x2','grid 6x6');
